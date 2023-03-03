@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: takacube/HeadlessCMS
-media_folder: my-web-site/static/assets
+media_folder: static/assets
 public_folder: /assets
 
 collections:
