@@ -1,23 +1,17 @@
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-
-media_folder: static/img
-public_folder: /img
-
+  name: test-repo
+  
+media_folder: static/assets
+public_folder: /assets
+  
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: post
+    label: Post
+    folder: post
     create: true
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
