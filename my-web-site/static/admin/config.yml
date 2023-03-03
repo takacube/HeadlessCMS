@@ -1,6 +1,6 @@
 backend:
-  name: test-repo
-  
+  name: github
+  repo: takacube/HeadlessCMS
 media_folder: static/assets
 public_folder: /assets
   
